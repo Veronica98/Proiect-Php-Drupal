@@ -1,0 +1,7 @@
+produse-homepage:
+    path: '/produse-homepage'
+    defaults:
+        _controller: 'Drupal\produse\Controller\ProduseHomePageController::display'
+        _title: 'Bit Mod Test'
+    requirements:
+        _custom_access: 'Drupal\produse\Controller\ProduseHomePageController::access'

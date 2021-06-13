@@ -1,0 +1,37 @@
+
+<form>
+	
+	Pret maxim: <input type="text" name="pretmax" placeholder="Ex: 4" value="">
+	<br><br>
+	<input type="submit" value="Filtreaza">
+	
+	
+</form>
+
+<br><br>
+
+<ul>
+
+	{% for produs in params.results1 %}
+	
+	<li>
+		{{ produs.denumire }} {{ produs.descriere }}, {{produs.pret}} Lei
+	</li>
+	
+	{% endfor %}
+
+</ul>
+
+
+<br><br>
+<ul>
+
+	{% for produs in params.produse %}
+	
+	<li>
+		{{ produs.denumire }} {{ produs.descriere }}, {{produs.pret}} Lei
+	</li>
+	
+	{% endfor %}
+
+</ul>

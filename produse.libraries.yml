@@ -1,0 +1,6 @@
+produse-css:
+    version: 1.x
+    header: true
+    css:
+        theme:
+            assets/css/produse.css: {}

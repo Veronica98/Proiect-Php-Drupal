@@ -1,0 +1,11 @@
+<?php
+
+function produse_theme() {
+    
+    $theme['produsehomepage'] = array(
+        'variables' => array('params' => array()), 'template' => 'homepage',
+    );
+
+    return $theme;
+    
+}

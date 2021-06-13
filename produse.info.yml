@@ -1,0 +1,6 @@
+name: 'Produse'
+type: module
+description: 'Drupal Test Module'
+package: BitAcad
+version: '8.x-1.x-dev'
+core: '8.x'

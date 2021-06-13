@@ -1,0 +1,111 @@
+<?php
+
+function produse_schema() {
+
+	$schema['produse'] = array(
+		'description' => 'Descriere generala tabel produse',
+		
+		'fields' => array(
+		
+			'id' => array(
+				'type' => 'serial',
+				'not null' => true,
+			
+			
+			),
+		
+			'denumire' => array(
+				'type' => 'varchar',
+				'length' =>200,
+				'not null' => true,
+			
+			),
+			
+			'descriere' => array(
+				'type' => 'text',
+			
+			),
+			
+			'pret' => array(
+				'type' => 'float',
+				'not null' => true,
+			
+			
+			),
+		
+		),
+		
+		'primary key' =>array(
+		
+			'id'
+		
+		),
+	
+	
+	
+	);
+
+	return $schema;
+}
+
+function produse_install(){
+	
+	$db_conn = \Drupal::database();
+	
+	$insert_obj = $db_conn->insert('produse')->fields(array('denumire','descriere','pret'));
+	
+	$insert_obj->values(
+			array(
+				'denumire' => 'ciocolata',
+				'descriere' => 'ciocolata cu alune',
+				'pret' => '5',
+			
+			)
+	
+	);
+	
+	$insert_obj->values(
+			array(
+				'denumire' => 'suc de mere',
+				'descriere' => 'suc natural de mere',
+				'pret' => '10',
+			
+			)
+	
+	);
+	
+	$insert_obj->values(
+			array(
+				'denumire' => 'kinder delice',
+				'descriere' => 'ciocolata kinder',
+				'pret' => '3.99',
+			
+			)
+	
+	);
+	
+	$insert_obj->values(
+			array(
+				'denumire' => 'paine',
+				'descriere' => 'paine toast',
+				'pret' => '7.50',
+			
+			)
+	
+	);
+	
+	$insert_obj->values(
+			array(
+				'denumire' => 'vin alb',
+				'descriere' => 'vin Jidvei',
+				'pret' => '30.99',
+			
+			)
+	
+	);
+	
+	$insert_obj->execute();
+	
+}
+
+
